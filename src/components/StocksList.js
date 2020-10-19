@@ -3,9 +3,9 @@ import { useHttp } from '../hooks/http';
 
 // import StockItem from './StockItem';
 
+import stockslistfile from '../stocks-list.js';
 import './StocksList.css';
 
-import stockslistfile from '../stocks-list.js';
 
 const StocksList = props => {
 
@@ -17,9 +17,6 @@ const StocksList = props => {
         price: stock.price
       }))
     : [];
-
-  console.log("zaz stocksList: " + JSON.stringify(stocksList));
-  console.log("zaz availableStocks: " + JSON.stringify(availableStocks));
 
   const isLoading = !availableStocks;
 
