@@ -1,29 +1,34 @@
 // This is just some sample data so you don't have to think of your own!
 const stocks = [
   {
+    id: 0,
     name: "GOOG",
-    desc: "",
-    price: 1724
+    price: 1724,
+    desc: ""
   },
   {
+    id: 1,
     name: "AAPL",
-    desc: "",
-    price: 2323
+    price: 2323,
+    desc: ""
   },
   {
+    id: 2,
     name: "DNL",
-    desc: "",
-    price: 124
+    price: 124,
+    desc: ""
   },
   {
+    id: 3,
     name: "DD",
-    desc: "",
-    price: 235
+    price: 235,
+    desc: ""
   },
   {
+    id: 4,
     name: "JFC",
-    desc: "",
-    price: 346
+    price: 346,
+    desc: ""
   }
 ];
 
