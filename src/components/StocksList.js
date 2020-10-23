@@ -9,12 +9,12 @@ import './StocksList.css';
 
 const StocksList = props => {
 
-  const [stocksList, setstocksList] = useState(stockslistfile);
-
-  const availableStocks = stocksList
-    ? stocksList.map(stock => ({
+  const availableStocks = props.stocksList
+    ? props.stocksList.map(stock => ({
+        id: stock.id,
         name: stock.name,
-        price: stock.price
+        price: stock.price,
+        desc: stock.desc
       }))
     : [];
 
@@ -27,12 +27,16 @@ const StocksList = props => {
       <React.Fragment>
 
         {availableStocks.map(stock => (
-          <div className="stock-item">
+          <div className="stock-item" key={stock.id}>
 
             <span className="stock-item-name">{stock.name}</span><br />
             {stock.price}
-
-            <button value={stock.name} onClick={props.buyHandler}>BUY</button>
+            <button 
+              value={stock.id} 
+              onClick={() => props.buyHandler(stock)} 
+            >
+              BUY
+            </button>
             <button value={stock.name} onClick="">SELL</button>
 
           </div>
